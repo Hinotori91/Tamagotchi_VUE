@@ -1,32 +1,25 @@
 <template>
-  <canvas width="700" height="70"></canvas>
+  <canvas class="bg-success" width="700" height="70"></canvas>
   <!-- <canvas></canvas> -->
 
-  <img src="../../assets/Tamagotchi/Green-Cap-Character-16x18.png" alt="">
+  <!-- <img src="../../assets/Tamagotchi/Green-Cap-Character-16x18.png" alt=""> -->
     
 </template>
 
 <script>
 import { createCanvas, loadImage } from 'canvas';
 
-// let img = new Image();
+let img = new Image();
 // img.src = 'https://opengameart.org/sites/default/files/Green-Cap-Character-16x18.png';
 // img.src = '../../assets/Tamagotchi/Green-Cap-Character-16x18.png';
 
   
-  // let canvas = document.querySelector('canvas');
   let canvas = createCanvas(700,70);
 
-  // img.src = 'https://opengameart.org/sites/default/files/Green-Cap-Character-16x18.png';
+  img.src = 'https://opengameart.org/sites/default/files/Green-Cap-Character-16x18.png';
 
   let ctx = canvas.getContext('2d');
-
-
-
-  const img = new Image()
-img.onload = () => ctx.drawImage(img, 0, 0)
-img.onerror = err => { throw err }
-img.src = 'https://opengameart.org/sites/default/files/Green-Cap-Character-16x18.png'
+  
 
 img.onload = function () {
   init();

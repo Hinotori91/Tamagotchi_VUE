@@ -1,26 +1,31 @@
 <template>
     <h1>Tamagotchi</h1>
-
+    
+    <div id="textFeld"></div>
+    <div id="fenster">
+      <div class="ueberHerz">
+        <div id="herz"><img src="../assets/Tamagotchi/herz.png" alt="Herz" width="100px"></div>
+        <div id="herzTf"></div>
+      </div>
+    </div>
+    <div id="nameTF">Tamagotchi Name:</div>
     <TamaSpriteSheet></TamaSpriteSheet>
 
-    <div id="nameTF">Tamagotchi Name</div>
-  <div id="textFeld"></div>
-  <div id="fenster">
-    <div class="ueberHerz">
-      <div id="herz"><img src="../assets/Tamagotchi/herz.png" alt="Herz" width="100px"></div>
-      <div id="herzTf"></div>
+
+    <div>
+      
+        <!-- <img :src="store.buttons[0].image" alt="Ananas" id="ananas" class="food-button"> -->
+        <img src="../assets/Tamagotchi/ananas.gif" alt="Ananas" id="ananas" class="food-button">
+      
+        <!-- <img :src="store.buttons[1].image" alt="Apfel" id="apfel" class="food-button"> -->
+        <img src="../assets/Tamagotchi/apfel.gif" alt="Apfel" id="apfel" class="food-button">
+      
+        <!-- <img :src="store.buttons[2].image" alt="Banane" id="banane" class="food-button"> -->
+        <img src="../assets/Tamagotchi/banane.gif" alt="Banane" id="banane" class="food-button">
+      
+        <!-- <img :src="store.buttons[3].image" alt="Schlafen" id="schlafen"> -->
+        <img src="../assets/Tamagotchi/zzz.gif" alt="Schlafen" id="schlafen">
     </div>
-  </div>
-
-
-  <!-- <img :src="store.buttons[0].image" alt="Ananas" id="ananas" class="food-button"> -->
-  <img src="../assets/Tamagotchi/ananas.gif" alt="Ananas" id="ananas" class="food-button">
-
-  <!-- <img :src="store.buttons[1].image" alt="Apfel" id="apfel" class="food-button">
-
-  <img :src="store.buttons[2].image" alt="Banane" id="banane" class="food-button">
-
-  <img :src="store.buttons[3].image" alt="Schlafen" id="schlafen"> -->
 </template>
   
 <script setup>
