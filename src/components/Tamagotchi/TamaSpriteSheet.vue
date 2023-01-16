@@ -1,29 +1,27 @@
 <template>
-  <canvas class="bg-success" width="700" height="70"></canvas>
-  <!-- <canvas></canvas> -->
+  <canvas id="myCanvas" class="bg-success" width="700" height="70"></canvas>
 
-  <!-- <img src="../../assets/Tamagotchi/Green-Cap-Character-16x18.png" alt=""> -->
-    
 </template>
 
-<script>
-import { createCanvas, loadImage } from 'canvas';
+<script setup>
+import { onMounted } from "vue";
 
 let img = new Image();
-// img.src = 'https://opengameart.org/sites/default/files/Green-Cap-Character-16x18.png';
-// img.src = '../../assets/Tamagotchi/Green-Cap-Character-16x18.png';
 
-  
-  let canvas = createCanvas(700,70);
+let canvas;
+let ctx;
 
-  img.src = 'https://opengameart.org/sites/default/files/Green-Cap-Character-16x18.png';
+img.src = 'https://opengameart.org/sites/default/files/Green-Cap-Character-16x18.png';
 
-  let ctx = canvas.getContext('2d');
-  
 
-img.onload = function () {
-  init();
-};
+onMounted(() => {
+  canvas = document.getElementById("myCanvas");
+  ctx = canvas.getContext('2d');
+}),
+
+  img.onload = function () {
+    init();
+  };
 
 const scale = 3;
 const width = 16;
@@ -114,5 +112,5 @@ function move_left() {
 }
 </script>
 <style>
-  
+
 </style>
