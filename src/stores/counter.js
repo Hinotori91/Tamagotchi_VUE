@@ -3,13 +3,12 @@ import { defineStore } from 'pinia';
 
 export const useTamagotchiStore = defineStore('tamagotchis', {
   state: () => ({
-    tamagotchi: [
-      {
-        name: "Tamagotchi Name",
-        energy: 100,
-        langeweile: 100
-      }
-    ],
+    tamagotchi:
+    {
+      name: "Herbert",
+      energy: 100,
+      langeweile: 100
+    },
     // foodValues: [
     buttons: [
       {
