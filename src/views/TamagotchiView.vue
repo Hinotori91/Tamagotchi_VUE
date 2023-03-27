@@ -1,6 +1,4 @@
 <template>
-  <h1>Tamagotchi</h1>
-
   <TamagotchiLogic>
     <template v-slot:spritesheet>
       <div v-if="visible = true">
@@ -8,7 +6,6 @@
       </div>
     </template>
   </TamagotchiLogic>
-
 </template>
   
 <script setup>
@@ -18,6 +15,4 @@ import TamaSpriteSheet from '@/components/Tamagotchi/TamaSpriteSheet.vue';
 let visible = true;
 </script>
   
-<style scoped>
-
-</style>
+<style scoped></style>
