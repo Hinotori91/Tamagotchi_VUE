@@ -31,15 +31,23 @@ function saveNameInStore() {
 }
 
 function feed(button) {
-  energyCounter.value += button.val;
+  if (energyCounter.value >= 100) {
+    energyCounter.value = 100;
+  } else {
+    energyCounter.value += button.val;
+  }
   console.log(energyCounter);
+}
+
+function restart() {
+  location.reload();
 }
 </script>
 
 <template>
   <h1>Tamagotchi</h1>
 
-  <RestartPopup v-if="energyCounter == 0"></RestartPopup>
+  <RestartPopup v-if="energyCounter == 0" @restart="restart"></RestartPopup>
   <div id="textFeld"></div>
   <div id="fenster">
     <div id="herz">

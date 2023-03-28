@@ -1,5 +1,9 @@
 <script setup>
+const emit = defineEmits(['restart']);
 
+function restart() {
+  emit('restart');
+}
 </script>
 
 <template>
@@ -11,7 +15,7 @@
           <h5>Du hast dein Tamagotchi vernachlästig. Es ist gestorben!</h5>
         </div>
         <div class="card-body">
-          <p class="btn btn-secondary">Erneut versuchen!</p>
+          <p class="btn btn-secondary" @click="restart">Erneut versuchen!</p>
         </div>
       </div>
     </div>
