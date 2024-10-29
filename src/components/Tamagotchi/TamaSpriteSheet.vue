@@ -1,6 +1,6 @@
 <template>
-  <canvas id="myCanvas" class="bg-success" width="700" height="70"></canvas>
-
+  <!-- <canvas id="myCanvas" class="bg-success" width="700" height="70"></canvas> -->
+  <canvas id="myCanvas" width="700" height="70"></canvas>
 </template>
 
 <script setup>
@@ -111,6 +111,4 @@ function move_left() {
   window.requestAnimationFrame(step);
 }
 </script>
-<style>
-
-</style>
+<style></style>

@@ -7,7 +7,8 @@ import { RouterLink } from 'vue-router'
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <RouterLink to="/" class="navbar-brand" href="#">Spiel-Wiese</RouterLink>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -23,6 +24,4 @@ import { RouterLink } from 'vue-router'
   </nav>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

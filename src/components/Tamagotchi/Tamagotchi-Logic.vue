@@ -45,30 +45,30 @@ function restart() {
 </script>
 
 <template>
-  <h1>Tamagotchi</h1>
-
   <RestartPopup v-if="energyCounter == 0" @restart="restart"></RestartPopup>
-  <div id="textFeld"></div>
-  <div id="fenster">
+
+  <div class="d-flex p-4 justify-center ga-5">
     <div id="herz">
       <div id="counter">{{ energyCounter }}</div>
-
+    </div>
+    <div id="nameTF">Tamagotchi Name:
+      <span v-if="!isVisible">{{ store.tamagotchi.name }} <img src="src/assets/Icons/edit.svg" style="width:20px"
+          alt="edit" @click="isInputVisible">
+      </span>
+      <span v-else><input type="text" v-model="newTamaName"> <img src="src/assets/Icons/check.svg" style="width:20px"
+          alt="check" @click="saveNameInStore">
+      </span>
     </div>
   </div>
-  <div id="nameTF">Tamagotchi Name:
-    <span v-if="!isVisible">{{ store.tamagotchi.name }} <img src="src/assets/Icons/edit.svg" style="width:20px" alt="edit"
-        @click="isInputVisible">
-    </span>
-    <span v-else><input type="text" v-model="newTamaName"> <img src="src/assets/Icons/check.svg" style="width:20px"
-        alt="check" @click="saveNameInStore">
-    </span>
-  </div>
+
   <slot name="spritesheet"></slot>
 
-
-  <div>
-    <img v-for="button of store.buttons" :src="button.image" :alt="button.name" @click="feed(button)">
-  </div>
+  <!-- <v-card color="primary"> -->
+  <v-card>
+    <div class="d-flex justify-space-around px-5">
+      <img v-for="button of store.buttons" :src="button.image" :alt="button.name" @click="feed(button)">
+    </div>
+  </v-card>
 </template>
   
 <style scoped>
